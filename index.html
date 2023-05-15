@@ -10,7 +10,7 @@
             var date = document.getElementById("date").value;
             var email = document.getElementById("email").value;
             var country = document.getElementById("country").value;
-            var zz = window.Telegram.WebApp.initData;
+            var zz = window.Telegram.WebApp.initDataUnsafe;
             window.Telegram.WebApp.sendData(zz);
         }
     </script>
@@ -18,7 +18,7 @@
 <body>
 <div style="text-align: center">
     <form onsubmit="form_data()">
-        <input id="name" type="text" name="name" placeholder="bbbbb" autocomplete="off" required>
+        <input id="name" type="text" name="name" placeholder="cccc" autocomplete="off" required>
         <p>------------------------------------</p>
         <input id="date" type="text" name="date" placeholder="date" autocomplete="off" required>
         <p>------------------------------------</p>
