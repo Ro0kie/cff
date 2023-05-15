@@ -11,7 +11,6 @@
             var email = document.getElementById("email").value;
             var country = document.getElementById("country").value;
             var initData = window.Telegram.WebApp.platform;
-            var data=[name,date,email,country,initData];
             window.Telegram.WebApp.sendData(initData);
         }
     </script>
@@ -19,7 +18,7 @@
 <body>
 <div style="text-align: center">
     <form onsubmit="form_data()">
-        <input id="name" type="text" name="name" placeholder="name" autocomplete="off" required>
+        <input id="name" type="text" name="name" placeholder="bbbbb" autocomplete="off" required>
         <p>------------------------------------</p>
         <input id="date" type="text" name="date" placeholder="date" autocomplete="off" required>
         <p>------------------------------------</p>
