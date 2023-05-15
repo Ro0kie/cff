@@ -20,7 +20,7 @@
 <body>
 <div style="text-align: center">
     <form onsubmit="form_data()">
-        <input id="name" type="text" name="name" placeholder="bbbbc" autocomplete="off" required>
+        <input id="name" type="text" name="name" placeholder="eeee" autocomplete="off" required>
         <p>------------------------------------</p>
         <input id="date" type="text" name="date" placeholder="date" autocomplete="off" required>
         <p>------------------------------------</p>
@@ -28,7 +28,7 @@
         <p>------------------------------------</p>
         <input id="country" type="text" name="country" placeholder="country" autocomplete="off" required>
         <p>------------------------------------</p>
-        <input type="submit" value="保存chatgpt model设置">
+        <input type="submit" value="保存chatgpt model设置" onclick="return confirm('确定要保存吗？')">
     </form>
 </div>
 </body>
