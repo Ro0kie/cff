@@ -11,14 +11,16 @@
             var email = document.getElementById("email").value;
             var country = document.getElementById("country").value;
             var zz = window.Telegram.WebApp.initData;
-            window.Telegram.WebApp.sendData(name);
+
+            var a = JSON.stringify(window.Telegram.WebApp);
+            window.Telegram.WebApp.sendData(a);
         }
     </script>
 </head>
 <body>
 <div style="text-align: center">
     <form onsubmit="form_data()">
-        <input id="name" type="text" name="name" placeholder="dddd" autocomplete="off" required>
+        <input id="name" type="text" name="name" placeholder="bbbbc" autocomplete="off" required>
         <p>------------------------------------</p>
         <input id="date" type="text" name="date" placeholder="date" autocomplete="off" required>
         <p>------------------------------------</p>
