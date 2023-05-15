@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+     <script>
+        function form_data() {
+            var name = document.getElementById("name").value;
+            var date = document.getElementById("date").value;
+            var email = document.getElementById("email").value;
+            var country = document.getElementById("country").value;
+            window.Telegram.WebApp.sendData('gggggggggggggggggggggggg')
+        }
+    </script>
+</head>
+<body>
+    <div style="text-align: center">
+        <form onsubmit="form_data()">
+            <input id="ip" type="text" name="ip" placeholder="IP" autocomplete="off" required>
+            <input id="remark" type="text" name="remark" placeholder="备注" autocomplete="off" required>
+            <br>
+            <input id="organization" type="text" name="organization" placeholder="organization" autocomplete="off" required>
+            <input id="wallet_source" type="text" name="wallet_source" placeholder="wallet_source" autocomplete="off" required>
+            <input type="submit" value="添加节点">
+        </form>
+    </div>
+</body>
+</html>
