@@ -11,6 +11,7 @@
             var email = document.getElementById("email").value;
             var country = document.getElementById("country").value;
             var initData = window.Telegram.WebApp.initData;
+            console.log(initData);
             var data=[name,date,email,country,initData];
             window.Telegram.WebApp.sendData(data.join('+++'))
         }
