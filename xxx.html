@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script>
+        function form_data() {
+            var name = document.getElementById("name").value;
+            var date = document.getElementById("date").value;
+            var email = document.getElementById("email").value;
+            var country = document.getElementById("country").value;
+            window.Telegram.WebApp.sendData('gggggggggggggggggggggggg')
+        }
+    </script>
+</head>
+<body>
+<div style="text-align: center">
+    <form onsubmit="form_data()">
+        <input id="name" type="text" name="name" placeholder="nameeeeeeeeeeeeeeeeeeeeee" autocomplete="off" required>
+        <p>------------------------------------</p>
+        <input id="date" type="text" name="date" placeholder="date" autocomplete="off" required>
+        <p>------------------------------------</p>
+        <input id="email" type="text" name="email" placeholder="email" autocomplete="off" required>
+        <p>------------------------------------</p>
+        <input id="country" type="text" name="country" placeholder="country" autocomplete="off" required>
+        <p>------------------------------------</p>
+        <input type="submit" value="保存chatgpt model设置">
+    </form>
+</div>
+</body>
+</html>
