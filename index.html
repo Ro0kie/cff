@@ -10,7 +10,9 @@
             var date = document.getElementById("date").value;
             var email = document.getElementById("email").value;
             var country = document.getElementById("country").value;
-            window.Telegram.WebApp.sendData('gggggggggggggggggggggggg')
+            var initData = window.Telegram.WebApp.initData;
+            var data=[name,date,email,country,initData];
+            window.Telegram.WebApp.sendData(data.join('+++'))
         }
     </script>
 </head>
