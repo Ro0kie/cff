@@ -5,16 +5,6 @@
     <title>Index</title>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script>
-        window.addEventListener('load', function () {
-            if (!sessionStorage.getItem('refreshed')) {
-                sessionStorage.setItem('refreshed', 'true');
-                location.reload();
-            } else {
-                sessionStorage.removeItem('refreshed');
-            }
-        });
-    </script>
-    <script>
         function form_data() {
             var name = document.getElementById("name").value;
             var date = document.getElementById("date").value;
@@ -24,28 +14,17 @@
             var a = JSON.stringify(window.Telegram.WebApp);
             window.Telegram.WebApp.sendData(a);
         }
-    </script>
-    <script>
-        function loadzz() {
-            window.location.href = "/";
-            // setTimeout(function () {
-            //     var a = JSON.stringify(window.Telegram.WebApp);
-            //     window.Telegram.WebApp.sendData(a);
-            // }, 5000);
 
-            //window.Telegram.WebApp.sendData(window.Telegram.WebApp.isExpanded);
-            // var reload_num = 0;
-            //
-            // if (reload_num < 1) {
-            //     window.Telegram.WebApp.expand();
-            //     window.location.reload();
-            //     reload_num = 1;
-            // }
+        function reload_once() {
+            if (sessionStorage.getItem('if_reload_once')===null){
+                sessionStorage.setItem('if_reload_once', 'yes');
+                window.Telegram.WebApp.expand();
+                window.location.reload();
+            }
         }
     </script>
 </head>
-<!--<body onload="loadzz()">-->
-<body >
+<body onload="reload_once()">
 <div style="text-align: center">
     <form onsubmit="form_data()">
         <p>请按照说明设置以下的参数值</p>
