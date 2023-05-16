@@ -17,8 +17,10 @@
     </script>
     <script>
         function loadzz() {
-            window.Telegram.WebApp.expand();
-            window.location.reload();
+            if (window.Telegram.WebApp.isExpanded === false) {
+                window.Telegram.WebApp.expand();
+                window.location.reload();
+            }
         }
     </script>
 </head>
