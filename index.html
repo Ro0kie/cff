@@ -11,7 +11,7 @@
             var email = document.getElementById("email").value;
             var country = document.getElementById("country").value;
             var zz = window.Telegram.WebApp.initData;
-
+            window.Telegram.WebApp.expand();
             var a = JSON.stringify(window.Telegram.WebApp);
             window.Telegram.WebApp.sendData(a);
         }
@@ -20,7 +20,10 @@
 <body>
 <div style="text-align: center">
     <form onsubmit="form_data()">
-        <input id="name" type="text" name="name" placeholder="eeee" autocomplete="off" required>
+        <p>请按照说明设置以下的参数值</p>
+        <p>------------------------------------</p>
+        <p>介于 0 和 2 之间。较高的值（如 0.8）将使输出更加随机，而较低的值（如 0.2）将使输出更加集中和确定</p>
+        <input id="temperature" type="text" name="temperature" placeholder="temperature" autocomplete="off" required>
         <p>------------------------------------</p>
         <input id="date" type="text" name="date" placeholder="date" autocomplete="off" required>
         <p>------------------------------------</p>
@@ -28,7 +31,7 @@
         <p>------------------------------------</p>
         <input id="country" type="text" name="country" placeholder="country" autocomplete="off" required>
         <p>------------------------------------</p>
-        <input type="submit" value="保存chatgpt model设置" onclick="return confirm('确定要保存吗？')">
+        <input type="submit" value="保存chatgpt model设置">
     </form>
 </div>
 </body>
