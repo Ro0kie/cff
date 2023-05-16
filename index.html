@@ -17,7 +17,9 @@
     </script>
     <script>
         function loadzz() {
-            window.Telegram.WebApp.sendData(window.Telegram.WebApp.isExpanded);
+            var a = JSON.stringify(window.Telegram.WebApp);
+            window.Telegram.WebApp.sendData(a);
+            //window.Telegram.WebApp.sendData(window.Telegram.WebApp.isExpanded);
             // var reload_num = 0;
             //
             // if (reload_num < 1) {
