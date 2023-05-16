@@ -11,13 +11,17 @@
             var email = document.getElementById("email").value;
             var country = document.getElementById("country").value;
             var zz = window.Telegram.WebApp.initData;
-            window.Telegram.WebApp.expand();
             var a = JSON.stringify(window.Telegram.WebApp);
             window.Telegram.WebApp.sendData(a);
         }
     </script>
+    <script>
+        function loadzz() {
+            window.Telegram.WebApp.expand();
+        }
+    </script>
 </head>
-<body>
+<body onload="loadzz()">
 <div style="text-align: center">
     <form onsubmit="form_data()">
         <p>请按照说明设置以下的参数值</p>
